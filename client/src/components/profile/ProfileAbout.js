@@ -16,11 +16,11 @@ const ProfileAbout = ({
         <div className='line' />
       </Fragment>
     )}
-    <h2 className='text-primary'>Skill Set</h2>
+    <h2 className='text-primary'>Interests</h2>
     <div className='skills'>
       {skills.map((skill, index) => (
         <div key={index} className='p-1'>
-          <i className='fas fa-check' /> {skill}
+          <i className='far fa-lightbulb' /> {skill}
         </div>
       ))}
     </div>

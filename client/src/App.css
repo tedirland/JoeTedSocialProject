@@ -574,4 +574,26 @@ button {
   .post button {
     padding: 0.3rem 0.4rem;
   }
+
+  .profileImgContainer {
+    position: relative;
+    width: 128px;
+  }
+  
+  .container {
+    position: relative;
+    width: 128px;
+  }
+  .back-element {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .front-element {
+    position: absolute !important;
+    top: 5px !important;
+    right: 5px !important;
+    z-index: 3 !important;
+    background-color: red !important;
+  }
 }

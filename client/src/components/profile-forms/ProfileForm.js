@@ -77,31 +77,15 @@ const ProfileForm = ({
       <small>* = required field</small>
       <form className="form" onSubmit={onSubmit}>
         <div className="form-group">
-          <select name="status" value={status} onChange={onChange}>
-            <option>* Select Professional Status</option>
-            <option value="Developer">Developer</option>
-            <option value="Junior Developer">Junior Developer</option>
-            <option value="Senior Developer">Senior Developer</option>
-            <option value="Manager">Manager</option>
-            <option value="Student or Learning">Student or Learning</option>
-            <option value="Instructor">Instructor or Teacher</option>
-            <option value="Intern">Intern</option>
-            <option value="Other">Other</option>
-          </select>
-          <small className="form-text">
-            Give us an idea of where you are at in your career
-          </small>
-        </div>
-        <div className="form-group">
           <input
             type="text"
-            placeholder="Company"
-            name="company"
-            value={company}
+            placeholder="Tagline"
+            name="status"
+            value={status}
             onChange={onChange}
           />
           <small className="form-text">
-            Could be your own company or one you work for
+            Give us your elevator pitch. What's your credo? 
           </small>
         </div>
         <div className="form-group">
@@ -113,7 +97,7 @@ const ProfileForm = ({
             onChange={onChange}
           />
           <small className="form-text">
-            Could be your own or a company website
+            Have something you're really into to share with the class? Link it here.
           </small>
         </div>
         <div className="form-group">
@@ -125,34 +109,22 @@ const ProfileForm = ({
             onChange={onChange}
           />
           <small className="form-text">
-            City & state suggested (eg. Boston, MA)
+            Where do you hang your hat? (eg. Boston, MA)
           </small>
         </div>
         <div className="form-group">
           <input
             type="text"
-            placeholder="* Skills"
+            placeholder="* (eg. Politics, Sports, TV, Movies, Current Events)"
             name="skills"
             value={skills}
             onChange={onChange}
           />
           <small className="form-text">
-            Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)
+            What kind of content are you into? This will help us recommend relevant posts (eg. Politics, Sports, TV, Movies, Current Events)
           </small>
         </div>
-        <div className="form-group">
-          <input
-            type="text"
-            placeholder="Github Username"
-            name="githubusername"
-            value={githubusername}
-            onChange={onChange}
-          />
-          <small className="form-text">
-            If you want your latest repos and a Github link, include your
-            username
-          </small>
-        </div>
+        
         <div className="form-group">
           <textarea
             placeholder="A short bio of yourself"
@@ -161,6 +133,13 @@ const ProfileForm = ({
             onChange={onChange}
           />
           <small className="form-text">Tell us a little about yourself</small>
+        </div>
+
+        <div className="form-group">
+        <a href='https://en.gravatar.com/emails/' target='_blank' className='btn btn-light'>
+        <i className='fas fa-portrait text-primary hide-sm' /> Add Profile Picture
+      </a>
+          <small className="form-text">We use Gravatar to store user images. Click the button above and sign up with the same email you used for Civility</small>
         </div>
 
         <div className="my-2">
@@ -230,6 +209,7 @@ const ProfileForm = ({
                 onChange={onChange}
               />
             </div>
+            
           </Fragment>
         )}
 

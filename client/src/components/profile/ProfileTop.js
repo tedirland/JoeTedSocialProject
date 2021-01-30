@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const ProfileTop = ({
   profile: {
@@ -13,7 +14,11 @@ const ProfileTop = ({
 }) => {
   return (
     <div className="profile-top bg-primary p-2">
-      <img className="round-img my-1" src={avatar} alt="" />
+      <img className="round-img my-1" src={avatar} alt=""/>
+      <br></br>
+      <a href='https://en.gravatar.com/emails/' target='_blank' className='btn btn-light'>
+        <i className='fas fa-portrait text-primary hide-sm' /> Edit Pic Via Gravatar
+      </a>
       <h1 className="large">{name}</h1>
       <p className="lead">
         {status} {company ? <span> at {company}</span> : null}
