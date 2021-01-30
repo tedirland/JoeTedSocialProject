@@ -12,7 +12,7 @@ const initialState = {
   skills: '',
   githubusername: '',
   bio: '',
-  twitter: '',
+  twitter: `https://twitter.com/`,
   facebook: '',
   linkedin: '',
   youtube: '',
@@ -79,7 +79,7 @@ const ProfileForm = ({
         <div className="form-group">
           <input
             type="text"
-            placeholder="Tagline"
+            placeholder="* Tagline"
             name="status"
             value={status}
             onChange={onChange}
@@ -159,34 +159,13 @@ const ProfileForm = ({
               <i className="fab fa-twitter fa-2x" />
               <input
                 type="text"
-                placeholder="Twitter URL"
+                placeholder="eg.(twitter.com/yourhandle)"
                 name="twitter"
                 value={twitter}
                 onChange={onChange}
               />
             </div>
 
-            <div className="form-group social-input">
-              <i className="fab fa-facebook fa-2x" />
-              <input
-                type="text"
-                placeholder="Facebook URL"
-                name="facebook"
-                value={facebook}
-                onChange={onChange}
-              />
-            </div>
-
-            <div className="form-group social-input">
-              <i className="fab fa-youtube fa-2x" />
-              <input
-                type="text"
-                placeholder="YouTube URL"
-                name="youtube"
-                value={youtube}
-                onChange={onChange}
-              />
-            </div>
 
             <div className="form-group social-input">
               <i className="fab fa-linkedin fa-2x" />
@@ -203,7 +182,7 @@ const ProfileForm = ({
               <i className="fab fa-instagram fa-2x" />
               <input
                 type="text"
-                placeholder="Instagram URL"
+                placeholder="eg.(instagram.com/yourusername)"
                 name="instagram"
                 value={instagram}
                 onChange={onChange}
