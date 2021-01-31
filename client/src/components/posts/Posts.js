@@ -5,7 +5,7 @@ import PostItem from './PostItem';
 import PostForm from './PostForm';
 import { getPosts } from '../../actions/post';
 
-const Posts = ({ getPosts, post: { posts } }) => {
+const Posts = ({ getPosts, post: { posts }, auth:{user} }) => {
   useEffect(() => {
     getPosts();
   }, [getPosts]);
@@ -14,7 +14,7 @@ const Posts = ({ getPosts, post: { posts } }) => {
     <Fragment>
       <h1 className="large text-primary">Posts</h1>
       <p className="lead">
-        <i className="fas fa-user" />Welcome Ted! Dive Into The Discussion
+        <i className="fas fa-user" />Welcome {user && user.name} Dive Into The Discussion
       </p>
       <PostForm />
       <div className="posts">
@@ -32,7 +32,8 @@ Posts.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  post: state.post
+  post: state.post,
+  auth: state.auth
 });
 
 export default connect(mapStateToProps, { getPosts })(Posts);
