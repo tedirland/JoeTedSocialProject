@@ -17,6 +17,12 @@ const UserSchema = new mongoose.Schema({
   avatar: {
     type: String
   },
+  onboardingComplete: {
+    type: Boolean,
+    default: false,
+    required: true
+    
+  },
   date: {
     type: Date,
     default: Date.now

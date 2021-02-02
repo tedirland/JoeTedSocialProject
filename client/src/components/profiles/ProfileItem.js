@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import formatDate from '../../utils/formatDate';
 
 const ProfileItem = ({
   profile: {
@@ -8,7 +9,8 @@ const ProfileItem = ({
     status,
     company,
     location,
-    skills
+    skills,
+    date
   }
 }) => {
   return (
@@ -16,6 +18,7 @@ const ProfileItem = ({
       <img src={avatar} alt='' className='round-img' />
       <div>
         <h2>{name}</h2>
+        <p>Member Since {formatDate(date)}</p>
         <p>
           {status} {company && <span> at {company}</span>}
         </p>
